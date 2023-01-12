@@ -1,6 +1,6 @@
 #define analogPin A0
 #include <LiquidCrystal.h>
-//#define digitalPin 3
+
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
@@ -13,7 +13,6 @@ const int LED1 = 9;
 const int LED2 = 8;
 
 float analogValue;
-//bool digitalValue;
 
 void setup() {
   Serial.begin(115200);
@@ -28,7 +27,6 @@ void setup() {
   lcd.begin(16, 2);
 
   pinMode(analogPin, INPUT);
-  //  pinMode(digitalPin, INPUT);
   delay(1000);
 }
 
@@ -47,7 +45,6 @@ void loop() {
       Serial.println("Provetrivanie ON");
       n=1;
     }
-    
     digitalWrite( in1, HIGH );
     digitalWrite( in2, LOW );
   }
